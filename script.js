@@ -7,7 +7,7 @@
 alert(getAppStoreUrl());
 
 function getAppStoreUrl() {
-    var userAgent = navigator.userAgent || window.opera;
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     if (/huawei/i.test(userAgent)) {
         return "https://my-link.com";
     }
