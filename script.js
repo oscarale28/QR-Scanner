@@ -1,6 +1,6 @@
 
 // Detección del dispositivo
-// alert(navigator.userAgent)
+alert(navigator.userAgent)
 
 // alert(getBrand())
 
@@ -10,15 +10,15 @@
 
 const info = platform.parse(navigator.userAgent)
 
-alert(`
+// alert(`
 
-${info.name}
-${info.version}
-${info.layout}
-${info.os}
-${info.description}
-${info.manufacturer}
-`)
+// ${info.name}
+// ${info.version}
+// ${info.layout}
+// ${info.os}
+// ${info.description}
+// ${info.manufacturer}
+// `)
 
 function detectDevice() {
     const userAgent = navigator.userAgent.toLowerCase();
