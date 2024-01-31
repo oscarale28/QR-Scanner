@@ -8,7 +8,15 @@
 
 // alert(navigator.userAgent)
 
-alert(platform)
+alert(`
+
+${platform.name}
+${platform.version}
+${platform.layout}
+${platform.os}
+${platform.description}
+
+`)
 
 function detectDevice() {
     const userAgent = navigator.userAgent.toLowerCase();
