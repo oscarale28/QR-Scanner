@@ -8,6 +8,8 @@
 
 // alert(navigator.userAgent)
 
+alert(platform)
+
 function detectDevice() {
     const userAgent = navigator.userAgent.toLowerCase();
 
@@ -32,7 +34,7 @@ function detectDevice() {
         });
 }
 
-detectDevice();
+// detectDevice();
 
 function getAppStoreUrl() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
