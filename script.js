@@ -4,10 +4,13 @@
 
 // alert(getBrand())
 
-alert(getAppStoreUrl());
+// alert(getAppStoreUrl());
+
+alert(navigator.userAgent)
 
 function getAppStoreUrl() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    console.log(userAgent)
     if (/huawei/i.test(userAgent)) {
         return "https://my-link.com";
     }
