@@ -13,8 +13,6 @@ Tablet = ${detector.tablet()}
 
 // alert(getBrand())
 
-document.getElementById('texto').innerHTML = "hola"
-
 function getBrand() {
     const userAgent = navigator.userAgent;
     const brands = [
