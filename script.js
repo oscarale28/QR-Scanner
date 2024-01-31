@@ -8,14 +8,16 @@
 
 // alert(navigator.userAgent)
 
+const info = platform.parse(navigator.userAgent)
+
 alert(`
 
-${platform.name}
-${platform.version}
-${platform.layout}
-${platform.os}
-${platform.description}
-
+${info.name}
+${info.version}
+${info.layout}
+${info.os}
+${info.description}
+${info.manufacturer}
 `)
 
 function detectDevice() {
