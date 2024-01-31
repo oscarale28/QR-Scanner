@@ -6,7 +6,33 @@
 
 // alert(getAppStoreUrl());
 
-alert(navigator.userAgent)
+// alert(navigator.userAgent)
+
+function detectDevice() {
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    // Llamada a la API de UserAgentAPI
+    fetch(`https://api.useragentapi.com/api/v4/json/${encodeURIComponent(userAgent)}`)
+        .then(response => response.json())
+        .then(data => {
+            const device = data.data.device;
+
+            if (device && device.manufacturer && device.manufacturer.toLowerCase() === "huawei") {
+                // Redirigir a la tienda de aplicaciones de Huawei
+                window.location.href = 'https://appstore.huawei.com/';
+            } else {
+                // Manejar otros dispositivos
+                alert('Dispositivo no compatible.');
+            }
+        })
+        .catch(error => {
+            console.error('Error al obtener información del dispositivo:', error);
+            // Manejar otros dispositivos
+            alert('Dispositivo no compatible.');
+        });
+}
+
+detectDevice();
 
 function getAppStoreUrl() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
