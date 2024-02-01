@@ -1,15 +1,15 @@
 
 // CON PLATFORM JS
-const info = platform.parse(navigator.userAgent)
-alert(`
+// const info = platform.parse(navigator.userAgent)
+// alert(`
 
-${info.name}
-${info.version}
-${info.layout}
-${info.os}
-${info.description}
-${info.manufacturer}
-`)
+// ${info.name}
+// ${info.version}
+// ${info.layout}
+// ${info.os}
+// ${info.description}
+// ${info.manufacturer}
+// `)
 
 // CON USERAGENTAPI
 function detectDevice() {
@@ -39,8 +39,7 @@ function detectDevice() {
 
 // CON USERAGENT
 function getAppStoreUrl() {
-    const info = platform.parse(navigator.userAgent)
-    alert(userAgent)
+    var userAgent = navigator.userAgent.toLowerCase() || navigator.vendor.toLowerCase();
     if (userAgent.includes('huawei')) {
         window.location.href = "https://appgallery.huawei.com/app/C110080371";
     } else if (userAgent.includes('android')) {
@@ -51,5 +50,5 @@ function getAppStoreUrl() {
         alert("Dispositivo no compatible.")
     }
 }
-// getAppStoreUrl();
+getAppStoreUrl();
 // alert(getAppStoreUrl());
