@@ -40,9 +40,9 @@ function detectDevice() {
 // CON USERAGENT
 function getAppStoreUrl() {
     var userAgent = navigator.userAgent.toLowerCase();
+    alert(userAgent)
     if (userAgent.includes('huawei')) {
         window.location.href = "https://appgallery.huawei.com/app/C110080371";
-        return
     } else if (userAgent.includes('android')) {
         window.location.href = "https://play.google.com/store/apps/details?id=com.comedica.votaciones";
     } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
