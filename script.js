@@ -1,15 +1,6 @@
 
-// Detección del dispositivo
-alert(navigator.userAgent)
-
-// alert(getBrand())
-
-// alert(getAppStoreUrl());
-
-// alert(navigator.userAgent)
-
-const info = platform.parse(navigator.userAgent)
-
+// CON PLATFORM JS
+// const info = platform.parse(navigator.userAgent)
 // alert(`
 
 // ${info.name}
@@ -20,6 +11,7 @@ const info = platform.parse(navigator.userAgent)
 // ${info.manufacturer}
 // `)
 
+// CON USERAGENTAPI
 function detectDevice() {
     const userAgent = navigator.userAgent.toLowerCase();
 
@@ -43,35 +35,21 @@ function detectDevice() {
             alert('Dispositivo no compatible.');
         });
 }
-
 // detectDevice();
 
+// CON USERAGENT
 function getAppStoreUrl() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    console.log(userAgent)
-    if (/huawei/i.test(userAgent)) {
-        return "https://my-link.com";
+    var userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.includes('huawei')) {
+        window.location.href = "https://appgallery.huawei.com/app/C110080371";
+        return
+    } else if (userAgent.includes('android')) {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.comedica.votaciones";
+    } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+        window.location.href = "https://apps.apple.com/sv/app/asamblea-comedica/id6473288215?l=en-GB";
+    } else {
+        alert("Dispositivo no compatible.")
     }
-    if (/android/i.test(userAgent)) {
-        return "https://play.google.com";
-    }
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return "https://apps.apple.com";
-    }
-    return null;
 }
-
-
-// let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
-// scanner.addListener('scan', function (content) {
-//     console.log(content);
-// });
-// Instascan.Camera.getCameras().then(function (cameras) {
-//     if (cameras.length > 0) {
-//         scanner.start(cameras[0]);
-//     } else {
-//         console.error('No cameras found.');
-//     }
-// }).catch(function (e) {
-//     console.error(e);
-// });
+getAppStoreUrl();
+// alert(getAppStoreUrl());
