@@ -45,7 +45,7 @@ function getAppStoreUrl() {
         window.location.href = "https://appgallery.huawei.com/app/C110080371";
     } else if (userAgent.includes('android')) {
         window.location.href = "https://play.google.com/store/apps/details?id=com.comedica.votaciones";
-    } else if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+    } else if (userAgent.includes('iphone') || userAgent.includes('ipad') || userAgent.includes('apple')) {
         window.location.href = "https://apps.apple.com/sv/app/asamblea-comedica/id6473288215?l=en-GB";
     } else {
         alert("Dispositivo no compatible.")
