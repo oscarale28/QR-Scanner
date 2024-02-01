@@ -40,6 +40,7 @@ function detectDevice() {
 // CON USERAGENT
 function getAppStoreUrl() {
     var userAgent = navigator.userAgent.toLowerCase() || navigator.vendor.toLowerCase();
+    alert(userAgent)
     if (userAgent.includes('huawei')) {
         window.location.href = "https://appgallery.huawei.com/app/C110080371";
     } else if (userAgent.includes('android')) {
